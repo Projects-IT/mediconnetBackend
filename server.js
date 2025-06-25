@@ -10,7 +10,7 @@ const app = exp();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: ["https://mediconnect-39iu.onrender.com", "http://localhost:3001"], // Allow both frontend and dashboard
+    origin: ["https://mediconnectpatient.onrender.com", "https://mediconnectdashboard.onrender.com"], // Allow both frontend and dashboard
     methods: ["GET", "POST", "PUT", "DELETE"]
   }
 });
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 // CORS configuration - must come before routes
 app.use(
     cors({
-      origin: ["https://mediconnect-39iu.onrender.com", process.env.FRONTEND_URL_TWO || "http://localhost:3001"],
+      origin: ["https://mediconnectpatient.onrender.com", "https://mediconnectdashboard.onrender.com"],
       methods: ["GET", "POST", "DELETE", "PUT"],
       credentials: true,
       exposedHeaders: ['Content-Disposition']
