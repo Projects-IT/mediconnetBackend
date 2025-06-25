@@ -1,0 +1,71 @@
+GET http://localhost:4000/patient-api/patients
+###
+POST http://localhost:4000/patient-api/patient
+Content-Type: application/json
+
+{
+    "username":"abhi",
+    "firstname":"abhilash",
+    "lastname":"banda",
+    "password":"abhi",
+    "email":"abhilash@gmail.com",
+    "DOB":"01-01-0000",
+    "gender":"male"
+
+}
+###
+
+POST http://localhost:4000/patient-api/login
+Content-Type: application/json
+
+{
+    "email":"abhilash@gmail.com",
+    "password":"abhi"
+
+}
+###
+
+POST http://localhost:4000/patient-api/appointment
+Content-Type: application/json
+
+{
+    "firstname":"abhilash",
+    "lastname":"banda",
+    "email":"reddyrohith757@gmail.com",
+    "DOB":"01-01-0000",
+    "gender":"male",
+    "appoientmentDate":"12-04-2024",
+    "doctor":"jai",
+    "department":"cardiac",
+    "address":"hyderabad"
+
+
+}
+###
+GET http://localhost:4000/patient-api/perviousAppointment/AbhilashBanda
+
+###
+POST http://localhost:4000/admin-api/admin
+Content-Type: application/json
+
+{
+    "FirstName":"abhilash",
+    "LastName":"banda",
+    "password":"abhilash",
+    "email":"abhilashbanda7@gmail.com",
+    "DOB":"01-01-0000",
+    "gender":"male",
+    "mobile":12345
+
+}
+
+###
+POST http://localhost:4000/admin-api
+###
+POST http://localhost:4000/admin-api/login
+Content-Type: application/json
+
+{
+    "password":"abhilash",
+    "email":"abhilashbanda7@gmail.com"
+}

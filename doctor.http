@@ -1,0 +1,11 @@
+GET  http://localhost:4000/doctor-api/login
+
+###
+POST http://localhost:4000/doctor-api/login
+Content-Type: application/json
+
+{
+    "password":"abhilash",
+    "email":"abhilashbanda7@gmail.com"
+
+}
